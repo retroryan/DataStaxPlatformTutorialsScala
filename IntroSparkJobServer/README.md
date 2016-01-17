@@ -16,12 +16,14 @@ CREATE KEYSPACE IF NOT EXISTS test WITH REPLICATION = {'class': 'SimpleStrategy'
 CREATE TABLE IF NOT EXISTS test.people (id INT, name TEXT, birth_date TIMESTAMP, PRIMARY KEY (id));
 ```
 
-build jar file:
+1. Build jar file:
+
 `sbt package`
 
 
-upload jar:
-curl --data-binary @target/scala-2.10/sparkjobserver_2.10-0.1.0.jar 52.88.210.79:8090/jars/JobServerDemo
+2. Upload jar:
+
+`curl --data-binary @target/scala-2.10/sparkjobserver_2.10-0.1.0.jar 52.88.210.79:8090/jars/JobServerDemo`
 
 verify jar file was uploaded. with either UI or curl
    In the UI go under the jars tab.
