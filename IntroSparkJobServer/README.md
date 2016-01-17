@@ -10,12 +10,14 @@ http://52.88.210.79:8090/
 
 ###  Job Server Basic Read Write Demo - JobServerBasicReadWrite.scala
 
+```
 create schema:
 CREATE KEYSPACE IF NOT EXISTS test WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 1 };
 CREATE TABLE IF NOT EXISTS test.people (id INT, name TEXT, birth_date TIMESTAMP, PRIMARY KEY (id));
+```
 
 build jar file:
-sbt package
+`sbt package`
 
 
 upload jar:
